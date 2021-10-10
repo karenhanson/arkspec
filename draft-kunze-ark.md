@@ -24,7 +24,7 @@
 #
 title: "The ARK Identifier Scheme"
 abbrev: "ARK Ids"
-docname: draft-todo-yourname-protocol-latest
+docname: draft-kunze-ark-latest
 category: info
 
 ipr: trust200902
