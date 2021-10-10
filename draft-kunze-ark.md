@@ -22,8 +22,8 @@
 #
 # Delete this comment when you are done.
 #
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "The ARK Identifier Scheme"
+abbrev: "ARK Ids"
 docname: draft-todo-yourname-protocol-latest
 category: info
 
