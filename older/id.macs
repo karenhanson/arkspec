@@ -1,0 +1,352 @@
+.\" .de xs
+.\" .if !\\n(1T .BG
+.\" .ds xl \\n(PN
+.\" .if \\n(.$ .ds xl \\$1
+.\" .nr sj \\n(.j
+.\" .nr pf \\n(.f
+.\" .nr px \\n(.s
+.\" .nr sl \\n(.l
+.\" .ls 1
+.\" .br
+.\" .da xt
+.\" .if \\n(.$-1 \{\
+.\" .	nr xi 1
+.\" .	in \\$2n
+.\" .\}
+.\" .ft 1
+.\" .ps \\n(PS
+.\" .ll \\n(LLu-8n
+.\" .na
+.\" .nh
+.\" ..
+.\" .de xe
+.\" .if !\\*(xlno \\a\\t\\*(xl
+.\" .br
+.\" .da
+.\" .ls
+.\" .ad \\n(sj
+.\" .ft \\n(pf
+.\" .ps \\n(px
+.\" .ll \\n(slu
+.\" .if \\n(xi \{\
+.\" .	nr xi 0
+.\" .	in 0
+.\" .\}
+.\" .nh
+.\" ..
+.\" .de px
+.\" .if \\n(VS>=40 .vs \\n(VSu
+.\" .if \\n(VS<=39 .vs \\n(VSp
+.\" .ll \\n(LLu
+.\" .lt \\n(LTu
+.\" .ta \\n(LLu-5n \\n(LLuR
+.\" .in 0
+.\" .nf
+.\" .rs
+.\" .xt
+.\" .nh
+.\" ..
+.\" .de ix
+.\" .ne 4
+.\" .xs
+.\" .ti 0
+.\" SORTME \\$1
+.\" .xe
+.\" .nh
+.\" ..
+.\" .de xA
+.\" .ix "\\$1"
+.\" .IP "\\$1"
+.\" .nh
+.\" ..
+.\" .de XS
+.\" .if !\\n(1T .BG
+.\" .ds XL \\n(PN
+.\" .if \\n(.$ .ds XL \\$1
+.\" .nr SJ \\n(.j
+.\" .nr PF \\n(.f
+.\" .nr PX \\n(.s
+.\" .nr SL \\n(.l
+.\" .ls 1
+.\" .br
+.\" .da XT
+.\" .if \\n(.$-1 \{\
+.\" .	nr XI 1
+.\" .	in \\$2n
+.\" .\}
+.\" .ft 1
+.\" .ps \\n(PS
+.\" .ll \\n(LLu-8n
+.\" .na
+.\" .nh
+.\" ..
+.\" .de XE
+.\" .if !\\*(XLno \\a\\t\\*(XL
+.\" .br
+.\" .da
+.\" .ls
+.\" .ad \\n(SJ
+.\" .ft \\n(PF
+.\" .ps \\n(PX
+.\" .ll \\n(SLu
+.\" .if \\n(XI \{\
+.\" .	nr XI 0
+.\" .	in 0
+.\" .\}
+.\" .nh
+.\" ..
+.\" .de PX
+.\" .if \\n(VS>=40 .vs \\n(VSu
+.\" .if \\n(VS<=39 .vs \\n(VSp
+.\" .ll \\n(LLu
+.\" .lt \\n(LTu
+.\" .ta \\n(LLu-5n \\n(LLuR
+.\" .in 0
+.\" .nf
+.\" .rs
+.\" .if !\\$1no \{\
+.\" .	sp .5i
+.\" .	tl ''\s+2Table of Contents\s-2''
+.\" .	sp .5i
+.\" .\}
+.\" .XT
+.\" .nh
+.\" ..
+.\" .de xx
+.\" .ne 4
+.\" .in 0
+.\" \\$1
+.\" .XS
+.\" \\$1
+.\" .XE
+.\" .nh
+.\" .in 3
+.\" ..
+.nr PS 12
+.nr VS 14.4p
+.nr h1 0 1
+.nr h2 0 1
+.nr h3 0 1
+.nr h4 0 1
+.nr h5 0 1
+.nh
+.de Bg
+.\" Begin: use at page break between Status/Abstact and next page
+.\" Arguments are optional: $1 is next page number if nroff, $2 if troff
+.if n .bp \\$1
+.if t .bp \\$2
+.DS
+.DE
+..
+.de Nh
+.\" Usage:  Nh Level FooterTitle \n RealTitleOnNextLine
+.ne 4
+.if \\$1<1   .nr h1 0
+.if \\$1<2   .nr h2 0
+.if \\$1<3   .nr h3 0
+.if \\$1<4   .nr h4 0
+.if \\$1<5   .nr h5 0
+.if '\\$1'0' .ds hs \\n+(h1.
+.if '\\$1'1' .ds hs \\n+(h1.
+.if '\\$1'2' .ds hs \\n(h1.\\n+(h2.
+.if '\\$1'3' .ds hs \\n(h1.\\n(h2.\\n+(h3.
+.if '\\$1'4' .ds hs \\n(h1.\\n(h2.\\n(h3.\\n+(h4.
+.if '\\$1'5' .ds hs \\n(h1.\\n(h2.\\n(h3.\\n(h4.\\n+(h5.
+.di Ni
+.in 0
+.ft B
+\\*(hs
+.it 1 Eh
+.ds CF \\*(hs \\$2
+..
+.de Sh
+.\" Usage:  Sh FooterTitle \n RealTitleOnNextLine
+.ne 4
+.di Ni
+.in 0
+.ft B
+.it 1 Eh
+.ds CF \\$2
+..
+.de Eh
+.br
+.di
+.in 0
+.Ni
+.XS
+.ft R
+.Ni
+.XE
+.nh
+.in 3
+.ft R
+..
+.\"
+.\" Init headers (and footers) and Title.
+.\" Usage:
+.\"     .Ih yyyy mm dd draft-xxx-yyy-NN.txt "Left Footer" "Short Title"
+.\"
+.\" For example:
+.\"     .Ih 2000 11 22 draft-kunze-ark-00.txt Kunze "ARK Persistent Names"
+.\"
+.de Ih
+.ds LF \\$5
+.ds CF
+.\" Test nroff command line for -rd1 flag, which formats for ietf editor
+.ie !\nd  .ds RF [Page \\\\n(PN]
+.el       .ds RF FORMFEED[Page \\\\n(PN]
+.ie \ne   .ds LH CDL Draft
+.el       .ds LH Internet Draft
+.Dc \\$1 \\$2 \\$3
+.ds RH \\*(Mp \\$1
+.ds St \\$6
+.ds CH \\*(St
+.ds Id \\$4
+..
+.\" Date set.  Sets Mp (month published), Dx (date expires), Cp (year published)
+.\" Usage:  .Ds year month day
+.de Dc
+.ds Cp \\$1
+.nr Dy \\$1
+.nr Dx \\$2+6
+.ie \\n(Dx>12 \{\
+.	nr Dx \\n(Dx-12
+.	Mc \\n(Dx
+.	nr Dy \\n(Dy+1
+.	ds Dx \\$3 \\*(Mo \\n(Dy
+.\}
+.el \{\
+.	Mc \\n(Dx
+.	ds Dx \\$3 \\*(Mo \\n(Dy
+.\}
+.Mc \\$2
+.ds Mp \\*(Mo
+.ds Dp \\$3 \\*(Mp \\$1
+..
+.\" Month conversion.  Sets Mo (month word).  Usage:  .Mc monthnumber
+.de Mc
+.if \\$1==1  .ds Mo January
+.if \\$1==2  .ds Mo February
+.if \\$1==3  .ds Mo March
+.if \\$1==4  .ds Mo April
+.if \\$1==5  .ds Mo May
+.if \\$1==6  .ds Mo June
+.if \\$1==7  .ds Mo July
+.if \\$1==8  .ds Mo August
+.if \\$1==9  .ds Mo September
+.if \\$1==10 .ds Mo October
+.if \\$1==11 .ds Mo November
+.if \\$1==12 .ds Mo December
+..
+.\" Coded section start
+.de Cs
+.\"nr My \\n[.in]
+.DS I
+.if t .ft CR
+.nf
+..
+.\" Coded section end
+.de Ce
+.if t .ft R
+.DE
+.\" in \\n[My]
+.\" why is this .in 3 needed?  used to work (solaris)?
+.in 3
+.fi
+.nh
+..
+.ie \ne \{\
+.de Pr
+This is a working document that may be updated, replaced, or obsoleted
+by other documents at any time, and should only be cited as ``work in
+progress.''  Distribution of this document is unlimited.
+Please send comments to jak at ucop dot edu.
+
+Creative Commons Copyright (CC) California Digital Library (\\*(Cp).
+..
+.de Cy
+Creative Commons Copyright (CC) California Digital Library (\\*(Cp).
+
+This document and the information contained herein are provided on an
+"AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR
+IS SPONSORED BY (IF ANY), THE CALIFORNIA DIGITAL LIBRARY AND THE
+UNIVERSITY OF CALIFORNIA DISCLAIM ALL WARRANTIES, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+..
+.\}
+.el \{\
+.de Pr
+By submitting this Internet-Draft, each author represents
+that any applicable patent or other IPR claims of which he
+or she is aware have been or will be disclosed, and any of
+which he or she becomes aware will be disclosed, in
+accordance with Section 6 of BCP 79.
+
+Internet-Drafts are working documents of the Internet Engineering Task
+Force (IETF), its areas, and its working groups.  Note that other groups
+may also distribute working documents as Internet-Drafts.
+
+Internet-Drafts are draft documents valid for a maximum of six months
+and may be updated, replaced, or obsoleted by other documents at any
+time.  It is inappropriate to use Internet-Drafts as reference
+material or to cite them other than as "work in progress."
+
+The list of current Internet-Drafts can be accessed at
+http://www.ietf.org/1id-abstracts.html
+
+The list of Internet-Draft Shadow Directories can be accessed at
+http://www.ietf.org/shadow.html
+
+Distribution of this document is unlimited.  Please send comments to
+jak@ucop.edu
+
+Copyright (C) The IETF Trust (\\*(Cp).  All Rights Reserved.
+.\" Creative Commons Copyright (CC) The Internet Society (2005).  Public Domain.
+..
+.de Cy
+Copyright (C) The IETF Trust (\\*(Cp).  This document is subject
+to the rights, licenses and restrictions contained in BCP 78, and
+except as set forth therein, the authors retain all their rights.
+
+This document and the information contained herein are provided on an
+"AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR
+IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY, THE IETF TRUST AND THE
+INTERNET ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+..
+.\}
+.\" =================
+.ie !\nd    .pl 63v
+.el         .pl 10.0i
+.\"  63v is friendly for enscript
+.\"el     .pl 65v
+.\" -re1 creates semi-internet-draft with no expiration, preamble, or copyright
+.ie \ne \{\
+.	ds Rv Next revision
+.	ds Dd CDL-Draft
+.\}
+.el \{\
+.	ds Rv Expires
+.	ds Dd Internet-Draft
+.\}
+.nr PD 0
+.nr PO 0
+.po 0
+.nr LL 7.2i
+.nr LT 7.2i
+.if t \{\
+.	nr PO .5i
+.	po .5i
+.\" LL < 7.2i is causing probz
+.	nr LL 6.8i
+.	nr LT 6.8i
+.\}
+.ll \n(LLu
+.lt \n(LTu
+.hy 0
+.ad l
+.br
