@@ -504,7 +504,6 @@ This string, including the check character itself, is the Check Zone.
 
 <!-- XXX kludge to make table display better -->
 
-<t> x </t>
 
 <texttable title="Examples of base, compact, and fully qualified forms"
     align="center">
@@ -531,7 +530,6 @@ This string, including the check character itself, is the Check Zone.
 
 </texttable>
 
-<t> x </t>
 
 <t>
 The ARK syntax can be summarized,
