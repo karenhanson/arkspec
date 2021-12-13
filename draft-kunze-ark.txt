@@ -443,8 +443,6 @@ Table of Contents
    preceding it back to the beginning of the NAAN.  This string,
    including the check character itself, is the Check Zone.
 
-   x
-
    Like the ARK itself, the NAAN "12345" and Shoulder "x6" have compact
    and fully qualified forms.
 
@@ -458,8 +456,6 @@ Table of Contents
    +----------+-------+--------------+--------------------------------+
 
       Table 1: Examples of base, compact, and fully qualified forms
-
-   x
 
    The ARK syntax can be summarized,
 
