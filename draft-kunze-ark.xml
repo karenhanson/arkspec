@@ -65,15 +65,15 @@
    </address>
   </author>
 
-  <date day="12" month="December" year="2021" />
+  <date day="13" month="December" year="2021" />
 
 <!--
 NB: all elements of date are required for IETF submissions
 
-    Submission form at https://datatracker.ietf.org/idst/upload.cgi
-        creates for example https://tools.ietf.org/html/draft-kunze-ark-18
-    Differencing tool example
-        https://www.ietf.org/rfcdiff?url1=draft-kunze-ark-29.txt&url2=draft-kunze-ark-28.txt
+Submission form at https://datatracker.ietf.org/idst/upload.cgi
+   creates for example https://tools.ietf.org/html/draft-kunze-ark-18
+Differencing tool example
+   https://www.ietf.org/rfcdiff?url1=draft-kunze-ark-29.txt&url2=draft-kunze-ark-28.txt
 -->
 
   <abstract>
@@ -89,11 +89,9 @@ the services that support robust reference. The term ARK itself refers both
 to the scheme and to any single identifier that conforms to it.
 An ARK has five components:
 </t>
-
 <t>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://NMA/]ark:[/]NAAN/Name[Qualifiers]
 </t>
-
 <t>
 an optional and mutable Name Mapping Authority (usually a
 hostname), the "ark:" label, the Name Assigning Authority Number (NAAN),
@@ -121,8 +119,7 @@ Tools exist for minting, binding, and resolving ARKs.
 [ Note about this transitional draft. The ARK Alliance Technical Working
 Group (https://wiki.lyrasis.org/display/ARKs/Technical+Working+Group) is in
 the process of revising the ARK spec via a series of Internet-Drafts.
-This draft contains many minor but noisy changes (lots of diffs but not much
-real change). While the spec is in transition, new implementors should follow
+While the spec is in transition, new implementors should follow
 https://datatracker.ietf.org/doc/html/draft-kunze-ark-18.
 ]
 </t>
@@ -148,8 +145,9 @@ are not new.  In the early 1990's, the design of the Uniform Resource
 Name <xref target="RFC2141"/> responded to the observed failure rate of URLs by
 articulating an indirect, non-hostname-based naming scheme and the
 need for responsible name management.  Meanwhile, promoters of the
-Digital Object Identifier <xref target="DOI"/> succeeded in building a community of
-providers around a mature software system <xref target="Handle"/> that supports name
+Digital Object Identifier <xref target="DOI"/> succeeded in building
+a community of providers around a mature software system <xref
+target="Handle"/> that supports name
 management.  The Persistent Uniform Resource Locator <xref
 target="PURL"/> was another
 scheme that had the advantage of working with unmodified web
@@ -570,10 +568,10 @@ Thus, for example, the following three ARKs are synonyms for just
 one information object:
 </t>
 <figure>
- <artwork>
-        http://example.org/rslvr/ark:12345/x54xz321
-             https://example.com/ark:12345/x54xz321
-                                 ark:12345/x54xz321 </artwork>
+<artwork>
+        http://example.org/rslvr/ark:12345/x6np1wh8k
+             https://example.com/ark:12345/x6np1wh8k
+                                 ark:12345/x6np1wh8k </artwork>
 </figure>
 <t>
 Strictly speaking, in the realm of digital objects, these ARKs may lead
@@ -644,8 +642,8 @@ to new form versus old form labels. Thus these two ARKs are equivalent:
 </t>
 <figure>
  <artwork>
-                          ark:/12345/x54xz321
-                           ark:12345/x54xz321 </artwork>
+                          ark:/12345/x6np1wh8k
+                           ark:12345/x6np1wh8k </artwork>
 </figure>
 <t>
 In a URL found in the wild, the label indicates that the URL stands a
@@ -834,8 +832,8 @@ boundary (see the section on ARKs that reveal object hierarchy).
 </t>
 <figure>
  <artwork>
-  ark:12345/x5wf6789/c2/s4.pdf       # correct primordinal shoulder
-  ark:12345/x5/wf6789/c2/s4.pdf      # INCORRECT
+  ark:12345/x6np1wh8k/c2/s4.pdf       # correct primordinal shoulder
+  ark:12345/x6/np1wh8k/c2/s4.pdf      # INCORRECT
               ^ WRONG </artwork>
 </figure>
 <t>
@@ -887,7 +885,7 @@ example,
 
 <figure>
  <artwork>
-    https://example.org/ark:12345/x54xz321/s3/f8.v05.tiff </artwork>
+    https://example.org/ark:12345/x6np1wh8k/c3/s5.v7.xsl </artwork>
 </figure>
 <t>
 the string "/s3/f8" is a ComponentPath and the string ".v05.tiff" is a
