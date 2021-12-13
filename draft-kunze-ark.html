@@ -1044,7 +1044,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Kunze &amp; Bermès</td>
-<td class="center">Expires 15 June 2022</td>
+<td class="center">Expires 16 June 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1057,12 +1057,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-kunze-ark-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2021-12-12" class="published">12 December 2021</time>
+<time datetime="2021-12-13" class="published">13 December 2021</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-06-15">15 June 2022</time></dd>
+<dd class="expires"><time datetime="2022-06-16">16 June 2022</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1125,7 +1125,7 @@ Tools exist for minting, binding, and resolving ARKs.<a href="#section-abstract-
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 15 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 16 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1299,8 +1299,7 @@ Tools exist for minting, binding, and resolving ARKs.<a href="#section-abstract-
 [ Note about this transitional draft. The ARK Alliance Technical Working
 Group (https://wiki.lyrasis.org/display/ARKs/Technical+Working+Group) is in
 the process of revising the ARK spec via a series of Internet-Drafts.
-This draft contains many minor but noisy changes (lots of diffs but not much
-real change). While the spec is in transition, new implementors should follow
+While the spec is in transition, new implementors should follow
 https://datatracker.ietf.org/doc/html/draft-kunze-ark-18.
 ]<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">
@@ -1322,8 +1321,8 @@ are not new.  In the early 1990's, the design of the Uniform Resource
 Name <span>[<a href="#RFC2141" class="xref">RFC2141</a>]</span> responded to the observed failure rate of URLs by
 articulating an indirect, non-hostname-based naming scheme and the
 need for responsible name management.  Meanwhile, promoters of the
-Digital Object Identifier <span>[<a href="#DOI" class="xref">DOI</a>]</span> succeeded in building a community of
-providers around a mature software system <span>[<a href="#Handle" class="xref">Handle</a>]</span> that supports name
+Digital Object Identifier <span>[<a href="#DOI" class="xref">DOI</a>]</span> succeeded in building
+a community of providers around a mature software system <span>[<a href="#Handle" class="xref">Handle</a>]</span> that supports name
 management.  The Persistent Uniform Resource Locator <span>[<a href="#PURL" class="xref">PURL</a>]</span> was another
 scheme that had the advantage of working with unmodified web
 browsers.  ARKs represent an approach that attempts to build on
@@ -1695,9 +1694,9 @@ Thus, for example, the following three ARKs are synonyms for just
 one information object:<a href="#section-2.1-2" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-2.1-3">
 <pre>
-        http://example.org/rslvr/ark:12345/x54xz321
-             https://example.com/ark:12345/x54xz321
-                                 ark:12345/x54xz321</pre><a href="#section-2.1-3" class="pilcrow">¶</a>
+        http://example.org/rslvr/ark:12345/x6np1wh8k
+             https://example.com/ark:12345/x6np1wh8k
+                                 ark:12345/x6np1wh8k</pre><a href="#section-2.1-3" class="pilcrow">¶</a>
 </div>
 <p id="section-2.1-4">
 Strictly speaking, in the realm of digital objects, these ARKs may lead
@@ -1760,8 +1759,8 @@ always treat received ARKs as equivalent if they differ only in regard
 to new form versus old form labels. Thus these two ARKs are equivalent:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-2.2-2">
 <pre>
-                          ark:/12345/x54xz321
-                           ark:12345/x54xz321</pre><a href="#section-2.2-2" class="pilcrow">¶</a>
+                          ark:/12345/x6np1wh8k
+                           ark:12345/x6np1wh8k</pre><a href="#section-2.2-2" class="pilcrow">¶</a>
 </div>
 <p id="section-2.2-3">
 In a URL found in the wild, the label indicates that the URL stands a
@@ -1943,8 +1942,8 @@ and blade string, especially not a "/" since it declares an object
 boundary (see the section on ARKs that reveal object hierarchy).<a href="#section-2.4.1-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-2.4.1-4">
 <pre>
-  ark:12345/x5wf6789/c2/s4.pdf       # correct primordinal shoulder
-  ark:12345/x5/wf6789/c2/s4.pdf      # INCORRECT
+  ark:12345/x6np1wh8k/c2/s4.pdf       # correct primordinal shoulder
+  ark:12345/x6/np1wh8k/c2/s4.pdf      # INCORRECT
               ^ WRONG</pre><a href="#section-2.4.1-4" class="pilcrow">¶</a>
 </div>
 <p id="section-2.4.1-5">
@@ -1989,7 +1988,7 @@ introduced and subdivided by the reserved character '/'.  In this
 example,<a href="#section-2.5-2" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-2.5-3">
 <pre>
-    https://example.org/ark:12345/x54xz321/s3/f8.v05.tiff</pre><a href="#section-2.5-3" class="pilcrow">¶</a>
+    https://example.org/ark:12345/x6np1wh8k/c3/s5.v7.xsl</pre><a href="#section-2.5-3" class="pilcrow">¶</a>
 </div>
 <p id="section-2.5-4">
 the string "/s3/f8" is a ComponentPath and the string ".v05.tiff" is a

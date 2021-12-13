@@ -5,8 +5,8 @@
 Network Working Group                                           J. Kunze
 Internet-Draft                                California Digital Library
 Intended status: Informational                                 E. Bermès
-Expires: 15 June 2022                   Bibliothèque nationale de France
-                                                        12 December 2021
+Expires: 16 June 2022                   Bibliothèque nationale de France
+                                                        13 December 2021
 
 
                        The ARK Identifier Scheme
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 June 2022.
+   This Internet-Draft will expire on 16 June 2022.
 
 Copyright Notice
 
@@ -116,10 +116,9 @@ Table of Contents
    [ Note about this transitional draft.  The ARK Alliance Technical
    Working Group (https://wiki.lyrasis.org/display/ARKs/
    Technical+Working+Group) is in the process of revising the ARK spec
-   via a series of Internet-Drafts.  This draft contains many minor but
-   noisy changes (lots of diffs but not much real change).  While the
-   spec is in transition, new implementors should follow
-   https://datatracker.ietf.org/doc/html/draft-kunze-ark-18. ]
+   via a series of Internet-Drafts.  While the spec is in transition,
+   new implementors should follow https://datatracker.ietf.org/doc/html/
+   draft-kunze-ark-18. ]
 
    This document describes a scheme for the high-quality naming of
    information resources.  The scheme, called the Archival Resource Key
@@ -486,9 +485,9 @@ Table of Contents
    object.  Thus, for example, the following three ARKs are synonyms for
    just one information object:
 
-           http://example.org/rslvr/ark:12345/x54xz321
-                https://example.com/ark:12345/x54xz321
-                                    ark:12345/x54xz321
+           http://example.org/rslvr/ark:12345/x6np1wh8k
+                https://example.com/ark:12345/x6np1wh8k
+                                    ark:12345/x6np1wh8k
 
    Strictly speaking, in the realm of digital objects, these ARKs may
    lead over time to somewhat different or diverging instances of the
@@ -551,8 +550,8 @@ Table of Contents
    differ only in regard to new form versus old form labels.  Thus these
    two ARKs are equivalent:
 
-                             ark:/12345/x54xz321
-                              ark:12345/x54xz321
+                             ark:/12345/x6np1wh8k
+                              ark:12345/x6np1wh8k
 
    In a URL found in the wild, the label indicates that the URL stands a
    reasonable chance of being an ARK.  If the context warrants,
@@ -721,8 +720,8 @@ Table of Contents
    and blade string, especially not a "/" since it declares an object
    boundary (see the section on ARKs that reveal object hierarchy).
 
-     ark:12345/x5wf6789/c2/s4.pdf       # correct primordinal shoulder
-     ark:12345/x5/wf6789/c2/s4.pdf      # INCORRECT
+     ark:12345/x6np1wh8k/c2/s4.pdf       # correct primordinal shoulder
+     ark:12345/x6/np1wh8k/c2/s4.pdf      # INCORRECT
                  ^ WRONG
 
    This little bit of discretion shields organizations from end users
@@ -760,7 +759,7 @@ Table of Contents
    introduced and subdivided by the reserved character '/'.  In this
    example,
 
-       https://example.org/ark:12345/x54xz321/s3/f8.v05.tiff
+       https://example.org/ark:12345/x6np1wh8k/c3/s5.v7.xsl
 
    the string "/s3/f8" is a ComponentPath and the string ".v05.tiff" is
    a VariantPath.  The ARK Qualifier is a formalization of some
