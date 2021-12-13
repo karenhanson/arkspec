@@ -20,7 +20,7 @@ to the scheme and to any single identifier that conforms to it.
 An ARK has five components:
  
        
-    [https://NMA/]ark:[/]NAAN/Name[Qualifiers]
+      [https://NMA/]ark:[/]NAAN/Name[Qualifiers]
  
        
 an optional and mutable Name Mapping Authority (usually a
@@ -1090,7 +1090,7 @@ the services that support robust reference. The term ARK itself refers both
 to the scheme and to any single identifier that conforms to it.
 An ARK has five components:<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">
-    [https://NMA/]ark:[/]NAAN/Name[Qualifiers]<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+      [https://NMA/]ark:[/]NAAN/Name[Qualifiers]<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 <p id="section-abstract-3">
 an optional and mutable Name Mapping Authority (usually a
 hostname), the "ark:" label, the Name Assigning Authority Number (NAAN),
@@ -2313,20 +2313,30 @@ decoded form.<a href="#section-2.7-5" class="pilcrow">¶</a></p>
 <a href="#section-2.8" class="section-number selfRef">2.8. </a><a href="#name-resolver-chains" class="section-name selfRef">Resolver Chains</a>
         </h3>
 <p id="section-2.8-1">
-Resolution is a computation, often multi-stage, that maps a client identifier
-to a response. The response may be any "thing", such as a spreadsheet,
-a landing page, a metadata record, or a 404 Not Found. A single-stage
-retrieval of a web page is a resolution. More interesting kinds of
-resolution involve forwarding (indirection) and/or proxying.<a href="#section-2.8-1" class="pilcrow">¶</a></p>
+There are certain terms used to talk about ARK resolution as described in this
+section. Resolution itself is seen as a computation, consisting of one or more
+stages, that maps a client identifier to some response. The response may take
+on a variety of forms consistent with modern networked information retrieval,
+including the return of a landing page, a metadata record, or a web-based 404
+Not Found message. A minimal form of ARK resolution is a single-stage, direct
+return of a web page without any indirection. Typically, however, ARK
+resolution involves a chain (sequence) of indirection (forwarding), and
+possibly proxying.<a href="#section-2.8-1" class="pilcrow">¶</a></p>
 <p id="section-2.8-2">
 On the web, forwarding is done with HTTP redirects. In general ARK resolution
-on the web involves a chain of one or more redirects that ends with the web
-server, known as the Responder, that responds without redirecting. The
-Responder might be a proxy and itself intiate a sub-resolution request chain
-unbeknownst to the original client, but that is out of scope here. An ARK might
-have a Resource Responder that is a different host from the Metadata Responder.
-The client starts resolution by contacting the NMA (server host) found in the
-original Mapping ARK URL. This is known as the First Resolver.<a href="#section-2.8-2" class="pilcrow">¶</a></p>
+on the web involves a chain of one or more redirects that ends when a web 
+server in the chain responds without redirecting. That final web server is
+known as the "responder". The "responder" server might actually be a proxy that
+constructs its response by first intiating a separate resolution process
+(whether using web protocols or not) unbeknownst to the original client, but
+any such process is invisible to the original client and out of scope for this
+discussion. There may be "resource responder" server for resource requests and
+a different "metadata responder" for metadata requests. ARK resolution starts
+when a client contacts the NMA (server host) found in the original Mapping ARK
+URL. The NMA that is contacted to start things off is known as the "first
+resolver". For example, Mapping for ARKs publicized with the hostname N2T.net,
+that host will be the first resolver. N2T.net redirects to a second resolver,
+such as ark.bnf.fr, but the latter is usually the first resolver for BnF ARKs.<a href="#section-2.8-2" class="pilcrow">¶</a></p>
 </section>
 </section>
 <section id="section-3">
@@ -2346,7 +2356,7 @@ practices that we now know to be less than optimal for persistence.<a href="#sec
         </h3>
 <p id="section-3.1-1">
 Because linguistic constructs imperil persistence, for ARKs non-ASCII character
-support is unimportant.  ARKs and URIs share goals of transcribability and
+support is not a priority.  ARKs and URIs share goals of transcribability and
 transportability within web documents, so characters are required to be
 visible, non-conflicting with HTML/XML syntax, and not subject to tampering
 during transmission across common transport gateways.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
